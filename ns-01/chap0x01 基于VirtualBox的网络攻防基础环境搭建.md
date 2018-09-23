@@ -1,5 +1,5 @@
-#chap0x01 基于VirtualBox的网络攻防基础环境搭建
-##一 .实验环境
+# chap0x01 基于VirtualBox的网络攻防基础环境搭建
+## 一 .实验环境
 * 靶机
 	* 名称：Victim
 	* 网络模式：内部网络(eth0)
@@ -16,7 +16,7 @@
 	* 网络模式：NAT(eth0)
 	* eth0 IP：10.0.2.5/24
 	* ![](image/Attacker.png)
-##二 .实验方案及过程
+## 二 .实验方案及过程
 ### Step1：Attacker使用NAT模式
 * 访问互联网
 ### Step2：Victim使用内网模式
@@ -59,7 +59,7 @@
 	<pre>root@Mark:~# ping 10.0.2.5</pre>
 	![](image/Victim_Attacker.png)
 * 用攻击者主机ping靶机 失败
-	<pre>Attacker_Victim.png</pre>
+	<pre>root@Mark:~# ping 192.168.56.102</pre>
 	![](image/Attacker_Victim.png)
 ### step8：网关访问攻击者主机和靶机
 * 用网关ping攻击者主机 成功
