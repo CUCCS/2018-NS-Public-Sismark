@@ -43,10 +43,10 @@
 * Server端抓包指令`tcpdump -n -i eth1 host 10.0.2.5 and port not 22`
 	* server端的22端口已与Client建立ssh连接，需过滤掉
 ### TCP connect scan
-* ![](image\TCP_connect_scan_open.png)
+* ![](image/TCP_connect_scan_open.png)
 * 过程
 	* `root@Server:~# python2 main.py <type> <address> <port> <flags>`
-	![](image\tcp_connect_scan.png)
+	![](image/tcp_connect_scan.png)
 * 分析：
 	* 当Client要与Server端**开放**的TCP端口建立连接：
 		1. Client会先发送flags字段为`S`(0x02)的数据包
@@ -59,14 +59,14 @@
 	* 当Client要与**离线**状态的Server端建立TCP连接
 		* Client发送flags字段为`S`(0x02)的数据包后未收到回复，表示主机不可达。
 ### TCP stealth scan
-* ![](image\TCP_stealth_scan.png)
+* ![](image/TCP_stealth_scan.png)
 * 过程
-	![](image\tcp_stealth_scan_pro.png)
+	![](image/tcp_stealth_scan_pro.png)
 * 分析：tcp stealth scan与TCP connect scan连接扫描相似，只是在第三次握手时Client只返回flags字段为`R`的数据包，然后连接建立完成。
 ### TCP XMAS scan
-* ![](image\TCP_XMAS_scan.png)
+* ![](image/TCP_XMAS_scan.png)
 * 过程
-	![](image\TCP_XMAS_scan_pro.png)
+	![](image/TCP_XMAS_scan_pro.png)
 * 分析
 	* 当Client要与Server端**开放**的TCP端口建立连接
 		* Client会先发送flags字段为`FPU`的数据包，如果端口是开放的，则Client不会收到任何回复
@@ -74,9 +74,9 @@
 		* Client先发送flags字段为`FPU`的数据包
 		* Server收到后从该端口(实验中为808端口)返回flags字段为`RA`的数据包表示端口处于关闭状态。
 ### UDP scan
-* ![](image\udp_scan.png)
+* ![](image/udp_scan.png)
 * 过程
-	![](image\udp_scan_pro.png)
+	![](image/udp_scan_pro.png)
 * 分析
 	* UDP是无连接的协议,通信双方无需建立通信信道，只要Client到Server存在可用信道。
 	* 当Client要与Server端**开放**的UDP端口建立连接
