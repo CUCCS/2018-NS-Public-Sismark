@@ -61,7 +61,7 @@
 ### TCP stealth scan
 * ![](image/TCP_stealth_scan.png)
 * 过程
-	![](image/tcp_stealth_scan_pro.png)
+	![](image/TCP_stealth_scan_pro.png)
 * 分析：tcp stealth scan与TCP connect scan连接扫描相似，只是在第三次握手时Client只返回flags字段为`R`的数据包，然后连接建立完成。
 ### TCP XMAS scan
 * ![](image/TCP_XMAS_scan.png)
